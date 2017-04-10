@@ -23,7 +23,6 @@
 
                 for(var i=0; i<10;i++){
                     var index = self.randomIntFromInterval(min, max);
-                    console.log(index);
                     self.booksList.push(books[index]);
                 }
             };
