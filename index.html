@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" >
+    <title>FF World</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <!-- Include the Angular JS library -->
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/angular-route.js"></script>
+
+    <!-- Angular Module -->
+    <script type="text/javascript" src="angular/model/app.js"></script>
+
+    <!-- Angular Service -->
+    <script type="text/javascript" src="angular/service/BooksService.js"></script>
+
+    <!-- Angular Controller -->
+    <script type="text/javascript" src="angular/controller/HeaderController.js"></script>
+    <script type="text/javascript" src="angular/controller/BooksController.js"></script>
+
+    <!-- Angular Directive -->
+    <script type="text/javascript" src="angular/directive/footer.js"></script>
+
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsee.css">
+    <link rel="stylesheet" href="assets/css/icons.css">
+
+
+    <!-- Owl Carousel Assets -->
+    <link rel="stylesheet" href="assets/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
+
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="assets/css/template-style.css">
+    <link href='assets/css/font.css' rel='stylesheet' type='text/css'>
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/template-scripts.js"></script> 
+  </head>
+   <body class="size-1140">
+      <!-- TOP NAV WITH LOGO -->
+      <header>
+         <nav>
+            <div class="line">
+               <div class="s-12 l-2">
+                  <a href="index.html"><img class="logo" src="assets/img/logo.png" style="max-width: 60%"></img></a>
+                  
+               </div>                  
+               <div class="top-nav s-12 l-10">
+                  <h2 class="nav-text" style="color: #a3a4a6">Menu</h2>
+                  <ul class="right" data-ng-controller="HeaderController as headerCtrl">
+                      <li data-ng-repeat="item in headerCtrl.menuItems">
+                          <a href="#{{item.id}}" data-ng-click="headerCtrl.setActive(item)" data-ng-class="{active : headerCtrl.activeMenu === item}" style="color: #a3a4a6">{{item.texto}}</a>
+                      </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>  
+
+      <section>
+         <!-- CAROUSEL --> 
+         <div id="carousel">
+            <div id="owl-demo" class="owl-carousel owl-theme"> 
+               <div class="item">
+                  <img src="assets/img/1.jpg" alt="">
+                  <div class="line"> 
+                     <div class="text hide-s">
+                        <div class="line"> 
+                          <div class="prev-arrow hide-s hide-m">
+                             <i class="icon-chevron_left"></i>
+                          </div>
+                          <div class="next-arrow hide-s hide-m">
+                             <i class="icon-chevron_right"></i>
+                          </div>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="assets/img/2.jpg" alt="">
+                  <div class="line"> 
+                     <div class="text hide-s">
+                        <div class="line"> 
+                          <div class="prev-arrow hide-s hide-m">
+                             <i class="icon-chevron_left"></i>
+                          </div>
+                          <div class="next-arrow hide-s hide-m">
+                             <i class="icon-chevron_right"></i>
+                          </div>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="assets/img/3.jpg" alt="">
+                  <div class="line"> 
+                     <div class="text hide-s">
+                        <div class="line"> 
+                          <div class="prev-arrow hide-s hide-m">
+                             <i class="icon-chevron_left"></i>
+                          </div>
+                          <div class="next-arrow hide-s hide-m">
+                             <i class="icon-chevron_right"></i>
+                          </div>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+         </div>
+         
+         <!-- FIRST BLOCK -->
+         <div id="first-block">
+            <div class="line">
+               <h1>FF World</h1>
+               <p>Giving you random books recommendations.</p>
+               <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contact Us</a></div>
+            </div>
+         </div>
+         <!-- ABOUT US -->
+         <div id="about-us">
+            <article class="s-12 m-12 l-6">
+               <h2>About<br> Us<br></h2>
+               <p>The present website is an effort in trying to help people in get to know new lesbian books in a very unusual way: Randomly.</p>
+               <div class="about-us-icons">
+                  <i class="icon-user_female"></i> <i class="icon-hourglass"></i> <i class="icon-eye"></i>
+               </div>
+            </article>
+            <div class="s-12 m-12 l-6">
+               <img src="assets/img/about.jpg" alt="">
+            </div>
+         </div>
+         <!-- CONTACT -->
+         <div id="contact">
+            <div class="line">
+               <div class="margin">
+                  <div class="s-12 m-12 l-5 center">
+                    <h3>Send a e-mail</h3>
+                    <form class="customform" action="http://formmail.kinghost.net/formmail.cgi" method="POST" accept-charset="ISO-8859-1"> 
+                      <input type="hidden" name="recipient" value="tatianassaturno@gmail.com"> <!-- Pode ser qualquer endereço de email -->
+                      <input type="hidden" name="redirect" value="#contact"> <!-- Após o envio, o usuário será redirecionado para a página configurada aqui -->
+                      <input type="hidden" name="subject" value="Support FF World">  <!-- Assunto da mensagem -->
+                      <input type="hidden" name="email" value="captacao@hospitaldafap.org.br">   <!-- Deve ser uma conta de email ativa em seu domínio -->
+                      <div class="s-12"><input id="email" name="replyto" placeholder="E-mail" title="E-mail" type="text" required /></div>
+                      <div class="s-12"><input id="nome" name="nome" placeholder="Name" title="Nome" type="text" required /></div>
+                      <input type="hidden" id="telefone" name="telefone" placeholder="Telephone" title="Telefone" type="text" value="null" />
+                      <div class="s-12"><textarea id="mensagem" placeholder="Sua mensagem" name="mensagem" rows="5" required ></textarea></div>
+                      <div class="s-12 m-12 l-4"><button class="color-btn" type="submit" value="Send">Send</button></div>
+                      <div class="s-12 m-12 l-4"><button class="color-btn" type="reset" value="Reset">Reset</button></div>
+                    </form>
+                  </div>                
+               </div>
+            </div>
+         </div>
+         
+          <!-- Books -->
+         <div id="books" data-ng-controller="BooksController as booksCtrl">
+            <div class="s-12 m-12 l-6">
+              <br>
+              <br>
+              <br>
+              <a href="" data-ng-click="booksCtrl.generateList()"><img src="assets/img/random.png" style="width: 50%; margin:0 auto;" alt=""></a>
+            </div>
+            <article class="s-12 m-12 l-6">
+              <h2>List</h2>
+              <div data-ng-repeat="book in booksCtrl.booksList track by $index">
+                <p>{{$index+1}}. {{book.title}} by {{book.author}}</p>
+              </div>
+            </article>
+         </div> 
+      </section>
+      <!-- FOOTER -->
+      <div footer></div>
+      <script type="text/javascript" src="assets/js/responsee.js"></script>
+      <script type="text/javascript" src="assets/owl-carousel/owl.carousel.js"></script>
+      <script type="text/javascript">
+         jQuery(document).ready(function($) {
+            var theme_slider = $("#owl-demo");
+            $("#owl-demo").owlCarousel({
+                navigation: false,
+                slideSpeed: 1200,
+                paginationSpeed: 400,
+                pagination:false,
+                autoPlay: 6000,
+                addClassActive: true,
+             // transitionStyle: "fade",
+                singleItem: true
+            });
+            $('.owl-teste').owlCarousel({
+                loop:true,
+                margin:10,
+                navigation:true,
+                pagination:false,
+                navigationText: [
+                  "<img src='assets/img/back.png' class='button-owl'>",
+                  "<img src='assets/img/next.png' class='button-owl'>"],
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            })
+            // Custom Navigation Events
+            $(".next-arrow").click(function() {
+                theme_slider.trigger('owl.next');
+            })
+            $(".prev-arrow").click(function() {
+                theme_slider.trigger('owl.prev');
+            }) 
+        }); 
+      </script>
+   </body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    background: url(../img/corrida/bg-01.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* importação de fontes */
+@font-face {
+    font-family: "BebasNeue";
+    src: url('../../fonts/BebasNeue.otf');
+}
+
+section{
+	padding-top: 2%;
+}
+
+#corrida .contato{
+    padding-top: 2%;
+}
+
+#corrida .apresentacao{
+    padding-top: 2%;
+}

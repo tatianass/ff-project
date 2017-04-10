@@ -1,0 +1,92 @@
+
+         <!-- FIRST BLOCK -->
+         <div id="first-block">
+            <div class="line">
+               <h1>Hospital da FAP</h1>
+               <p>Uma história de apoio a comunidade campinense.</p>
+               <div class="s-12 m-4 l-2 center"><a class="white-btn" href="#contact">Contate-nos</a></div>
+            </div>
+         </div>
+         <!-- ABOUT US -->
+         <div id="about-us">
+            <div class="s-12 m-12 l-6 media-container">
+               <img src="assets/img/about.jpg" alt="">
+            </div>
+            <article class="s-12 m-12 l-6">
+               <h2>Conheça<br> Nossa<br> História</h2>
+               <p>Nos idos de 1964, chegou a Campina Grande, o Dr. Cornelius de  Ruyter, enviado pelo Governo Holandês, com a finalidade de escolher um local para instalação de um Hospital destinado a dar assistência médico-hospitalar e colaborar com programas de medicina preventiva, ensino médico e de enfermagem  bem como atividades correlatas, na região nordeste do brasil, tendo o mesmo escolhido Campina Grande, que lhe pareceu acolhedora, com um clima ameno e próximo das zonas depauperadas economicamente, tais como sertão e o cariri da paraíba. Ele fundou de início uma Associação denominada ASSONOR, ainda sob controle holandês, a qual se transformou posteriormente, na Fundação Assistencial da Paraíba - FAP, agora sob inteiro controle dos brasileiros. </p>
+               <p>A Fundação Assistencial da Paraíba – FAP é uma Entidade Jurídica de direito privado, criada em 16 de março de 1965 (Conforme Escritura Pública lavrada em Notas do Tabelião do 1º Cartório da Comarca de Campina Grande), tendo seu Estatuto sido publicado no Diário Oficial do Estado em 20 de abril de 1965.  Foi considerada de Utilidade Pública pelo Estado da Paraíba, pelo Município de Campina Grande e pelo Governo Federal, sendo registrada no Conselho Nacional de Serviço Social (Hoje Conselho Nacional de Assistência Social) Sob o Número 44.157/65.</p>
+               <p>Está localizada no antigo Sítio Brito no Bairro de Bodocongó nesta Cidade e seu patrimônio compreende grande terreno medindo mais de 110 mil metros quadrados, com edificações totalizando mais de 13 mil metros quadrados de área coberta.
+               </p>
+               <a href="https://docs.google.com/document/d/1o3mOxVBNKHph_NlPjgROjM5pKhvo3gzXeDMD43E4XOs/edit?usp=sharing">Saiba mais</a>
+               <div class="about-us-icons">
+                  <i class="icon-user_female"></i> <i class="icon-hourglass"></i> <i class="icon-eye"></i>
+               </div>
+            </article>
+         </div>
+         <!-- CONTACT -->
+         <div id="contact">
+            <div class="line">
+               <div class="margin">
+                  <div class="s-12 m-12 l-3 hide-m hide-s margin-bottom right-align">
+                       
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1979.1556562302824!2d-35.908810792122466!3d-7.205279998699545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6de82d25a28156da!2sHospital+Escola+da+FAP!5e0!3m2!1spt-BR!2sbr!4v1476374628366" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+                  </div>
+                  <div class="s-12 m-12 l-4 margin-bottom right-align">
+                     <h3>Hospital da FAP</h3>
+                     <address>
+                        <p><strong>Endereço:</strong>Av Francisco Pinto, s/n - Campina Grande, PB, 58429-350</p>
+                        <p><strong>Tel:</strong> 083-2102-0300</p>
+                        <p><strong>E-mail:</strong> presidencia@hospitaldafap.org.br</p>
+                     </address>
+                     <br />
+                     <h3>Social</h3>
+                     <p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/HospitalFAP/?fref=ts">Facebook</a></p>
+                     <p class="margin-bottom"><i class="icon-twitter icon"></i> <a href="https://twitter.com/hospitaldafap">Twitter</a></p>
+                  </div>
+                  <div class="s-12 m-12 l-5">
+                    <h3>Mande um e-mail</h3>
+                    <form id="contactform" class="customform" action="http://formspree.io/tatiana_ten@hotmail.com" method="POST">
+                      <div class="s-12"><input name="_replyto" placeholder="Seu e-mail" title="Seu e-mail" type="mail" required /></div>
+                      <div class="s-12"><input name="_subject" placeholder="Assunto" title="Assunto" type="text" required /></div>
+                      <div class="s-12"><textarea placeholder="Sua mensagem" name="message" rows="5" required ></textarea></div>
+                      <input type="text" name="_gotcha" style="display:none" />
+                      <input type="hidden" name="_next" value="fap" />
+                      <div class="s-12 m-12 l-4"><button class="color-btn" type="submit" value="Send">Enviar</button></div>
+                      <div class="s-12 m-12 l-4"><button class="color-btn" type="reset" value="Reset">Resetar</button></div>
+                    </form>
+                  </div>                
+               </div>
+            </div>
+         </div>
+
+         <script type="text/javascript">
+         jQuery(document).ready(function($) {
+            var theme_slider = $("#owl-demo");
+            $("#owl-demo").owlCarousel({
+                navigation: false,
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                autoPlay: 6000,
+                addClassActive: true,
+             // transitionStyle: "fade",
+                singleItem: true
+            });
+            $("#owl-demo2").owlCarousel({
+                slideSpeed: 300,
+                autoPlay: true,
+                navigation: true,
+                navigationText: ["&#xf007","&#xf006"],
+                pagination: false,
+                singleItem: true
+            });
+        
+            // Custom Navigation Events
+            $(".next-arrow").click(function() {
+                theme_slider.trigger('owl.next');
+            })
+            $(".prev-arrow").click(function() {
+                theme_slider.trigger('owl.prev');
+            })     
+        }); 
+      </script>
