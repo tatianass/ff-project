@@ -14,7 +14,8 @@
                 {texto: 'Home', id: "carousel"},
                 {texto:'About', id: "about-us"},
                 {texto:'Contact', id: "contact"},
-                {texto:'Books', id: "books"}
+                {texto:'Random', id: "random"},
+                {texto:'Genre', id: "genre"}
             ];
 
             self.activeMenu = self.menuItems[0];

@@ -70,7 +70,7 @@
          </nav>
       </header>  
 
-      <section>
+      <section  data-ng-controller="BooksController as booksCtrl">
          <!-- CAROUSEL --> 
          <div id="carousel">
             <div id="owl-demo" class="owl-carousel owl-theme"> 
@@ -133,7 +133,7 @@
          <div id="about-us">
             <article class="s-12 m-12 l-6">
                <h2>About<br> Us<br></h2>
-               <p>The present website is an effort (using Goodreads API) in trying to help people in get to know new lesbian books in a very unusual way: Randomly.</p>
+               <p>The present website is an effort (using Goodreads API) in trying to help people in get to know new lesbian books by genre and in a very unusual way: Randomly.</p>
                <div class="about-us-icons">
                   <i class="icon-user_female"></i> <i class="icon-hourglass"></i> <i class="icon-eye"></i>
                </div>
@@ -165,8 +165,8 @@
             </div>
          </div>
          
-          <!-- Books -->
-         <div id="books" data-ng-controller="BooksController as booksCtrl">
+          <!-- Random Books -->
+         <div id="random">
             <div class="s-12 m-12 l-6">
               <br>
               <br>
@@ -179,6 +179,32 @@
                 <p>{{$index+1}}. {{book.title}} by {{book.author}}</p>
               </div>
             </article>
+         </div> 
+
+         <!-- Genre Books -->
+         <div id="genre">
+            <div class="line">
+              <div class="margin">
+                <div class="s-12 m-6 l-3" data-ng-repeat="genre in booksCtrl.genres track by $index" data-ng-hide="booksCtrl.genreSelected">
+                  <a href="" data-ng-click="booksCtrl.setGenre(genre)">
+                    <div class="box">
+                      <i class={{genre.class}} aria-hidden="true"></i>
+                      <p>{{genre.name}}</p>
+                    </div>
+                  </a>
+                </div>
+                <div data-ng-show="booksCtrl.genreSelected">
+                  <span class="buttons">
+                    <button class="btn" href="" data-ng-click="booksCtrl.genreSelected=false; booksCtrl.listLimit=10">Back</button>
+                    <button class="btn" data-ng-click="booksCtrl.listLimit=booksCtrl.listLimit+10">Show more...</button>
+                  </span>
+                  <br>
+                  <div class="s-12 m-6 l-3" data-ng-repeat="book in booksCtrl.genresList | limitTo: booksCtrl.listLimit">
+                    <p style="text-align: center; margin: 0.5em">{{$index+1}}. {{book.title}} by {{book.author}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
          </div> 
       </section>
       <!-- FOOTER -->
