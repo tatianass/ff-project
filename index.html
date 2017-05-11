@@ -19,6 +19,7 @@
     <!-- Include the Angular JS library -->
     <script type="text/javascript" src="assets/js/angular.min.js"></script>
     <script type="text/javascript" src="assets/js/angular-route.js"></script>
+    <script type="text/javascript" src="assets/js/smart-table.min.js"></script>
 
     <!-- Angular Module -->
     <script type="text/javascript" src="angular/model/app.js"></script>
@@ -175,9 +176,33 @@
             </div>
             <article class="s-12 m-12 l-6">
               <h2>List</h2>
-              <div data-ng-repeat="book in booksCtrl.booksList track by $index">
-                <p>{{$index+1}}. {{book.title}} by {{book.author}}</p>
-              </div>
+              <div class="s-12 l-8 center">
+                    <div class="line">
+                        <table st-table="genre" class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th> </th>
+                              <th>Title</th>
+                              <th>Author</th>
+                              <th>Link</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr data-ng-repeat="book in booksCtrl.booksList">
+                              <td>{{$index+1}}</td>
+                              <td>{{book.title}}</td>
+                              <td>{{book.author}}</td>
+                              <td width="10%">
+                                <div>
+                                  <a href="{{book.link}}" target="_blank"><img class="link-logo" src="assets/img/goodreads-logo.png"></a>
+                                  <!-- <a href="{{book.link}}" target="_blank"><img class="link-logo" src="assets/img/amazon-logo.png"></a> -->
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
             </article>
          </div> 
 
@@ -199,8 +224,32 @@
                     <button class="btn" data-ng-click="booksCtrl.listLimit=booksCtrl.listLimit+10">Show more...</button>
                   </span>
                   <br>
-                  <div class="s-12 m-6 l-3" data-ng-repeat="book in booksCtrl.genresList | limitTo: booksCtrl.listLimit">
-                    <p style="text-align: center; margin: 0.5em">{{$index+1}}. {{book.title}} by {{book.author}}</p>
+                  <div class="s-12 l-8 center">
+                    <div class="line">
+                        <table st-table="genre" class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th> </th>
+                              <th>Title</th>
+                              <th>Author</th>
+                              <th>Link</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr data-ng-repeat="book in booksCtrl.genresList | limitTo: booksCtrl.listLimit">
+                              <td>{{$index+1}}</td>
+                              <td>{{book.title}}</td>
+                              <td>{{book.author}}</td>
+                              <td width="10%">
+                                <div>
+                                  <a href="{{book.link}}" target="_blank"><img class="link-logo" src="assets/img/goodreads-logo.png"></a>
+                                  <!-- <a href="{{book.link}}" target="_blank"><img class="link-logo" src="assets/img/amazon-logo.png"></a> -->
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
                   </div>
                 </div>
               </div>
