@@ -17,6 +17,7 @@
                 {query:"action", class:"icon-play gradient icon3x", name:"Action"},
                 {query:"anthology", class:"icon-list gradient icon3x", name:"Anthology"},
                 {query:"art", class:"icon-brush gradient icon3x", name:"Art"},
+                {query:"audiobook", class:"icon-mute_off gradient icon3x", name:"Audiobook"},
                 {query:"autobiographies", class:"icon-user_female gradient icon3x", name:"Autobiographies"},
                 {query:"biographies", class:"icon-users gradient icon3x", name:"Biographies"},
                 {query:"childrens", class:"icon-dribbble gradient icon3x", name:"Childrens"},
