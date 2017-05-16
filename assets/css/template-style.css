@@ -274,13 +274,12 @@ p.logo strong {
   color: #fff;
 }
 
-#genre .link-logo {
-  width: 100%;
-  padding: 5%;
+.link-logo {
+  width: 40%;
 }
 
-#genre td img {
-  display: inline-flex;
+td img {
+  display: inline-flex;"
 }
 
 .box p {
@@ -677,6 +676,10 @@ footer p, footer a:visited, footer a, footer a:hover {
 @media screen and (max-width: 600px) {
     #random .modal-content {
         max-width: 100%;
+    }
+
+    .link-logo {
+    	width: 40%;
     }
 }
 /* greater than phone width */
