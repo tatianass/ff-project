@@ -1,1 +1,1 @@
-var app = angular.module("app", ['smart-table']);
+var app = angular.module("app", ['smart-table','ngSanitize', 'ngColorThis']);

@@ -20,6 +20,8 @@
     <script type="text/javascript" src="assets/js/angular.min.js"></script>
     <script type="text/javascript" src="assets/js/angular-route.js"></script>
     <script type="text/javascript" src="assets/js/smart-table.min.js"></script>
+    <script src="node_modules/angular-color-this/example/lib/angular-sanitize.min.js"></script>
+    <script src="node_modules/angular-color-this/example/lib/angular-color-this.js"></script>
 
     <!-- Angular Module -->
     <script type="text/javascript" src="angular/model/app.js"></script>
@@ -212,9 +214,8 @@
               <div class="margin">
                 <div class="s-12 m-6 l-3" data-ng-repeat="genre in booksCtrl.genres track by $index" data-ng-hide="booksCtrl.genreSelected">
                   <a href="" data-ng-click="booksCtrl.setGenre(genre)">
-                    <div class="box">
-                      <i class={{genre.class}} aria-hidden="true"></i>
-                      <p>{{genre.name}}</p>
+                    <div class="box" color-this="background-color" data-color="genre.name">
+                      <p data-shadow='dang!'>{{genre.name}}</p>
                     </div>
                   </a>
                 </div>

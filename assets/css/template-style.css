@@ -282,23 +282,27 @@ td img {
   display: inline-flex;"
 }
 
-.box p {
-	text-align: center;
-	font-size: 1.5em;
-	line-height: 1.5em;
-}
-
 .box{
 	margin: 5% auto 5% auto;
-	width: 200px;
+	width: 270px;
 	height: 150px;
 	background-color: #22A4D5;
 	color: #0A1B30;
 }
 
-.box:hover {
-	color: #fff;
-	background: rgba(34,164,213,0.7);
+@import url(http://fonts.googleapis.com/css?family=Righteous);
+
+.box p {
+	text-align: center;
+	color: white;
+	font-family: 'Righteous', serif;
+	font-size: 2em; 
+	text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+	word-wrap: break-word;
+ }
+
+.box p:hover {
+	color: rgba(255,255,0,1);
 }
 
 .buttons{
